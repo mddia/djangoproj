@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+{% block title %}ciné-séries{% endblock %}
+{% block content %}
+<table class="table">
+{% for acteur in acteurs %}
+
+    <tr>
+        <td>
+            <b><a href="{% url 'acteur' id_acteur=acteur.id %}">
+                {{ acteur.titre }}
+            </a></b><br />
+            <br />
+            {{ acteur.nom }}
+            {{ acteur.prenom }}
+            {{ acteur.date }}
+            {{ acteur.biographie }}
+            {{ acteur.filmographie }}                          
+        </td>
+        <td>
+            <a href="{% url 'acteur' id_acteur=acteur.id %}">
+            <img src="{{ acteur.photo.url }}" />
+            <!--à consulter pour intégrer les vidéos  https://stackoverflow.com/questions/28268574/set-url-to-load-iframe-in-a-django-template-->              
+            </a>
+        </td>
+    </tr>
+
+{% endfor %}
+</table>
+{% endblock %}

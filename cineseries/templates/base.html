@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+         <!-- add below Django command to use bootstrap3 in web page.  -->
+         <!-- first load django static tag. -->
+        {% load static %}
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="{% static 'front/css/style.css' %}">
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <title>{% block title %}Ciné - Séries{% endblock %}</title>
+    </head>
+    <body>
+        <div id="wrapper">
+        <div>
+            <header id="header" role="header"> 
+
+                <div class="navbar"><!--comment afficher les icones sans utiliser static-->
+                          <div id="PyCINE_3"><a href="cineseries/home"><img src="{{ home.logo }}" alt=""></a></div>
+                           <a href="login.html">Mon PyCINE</a>
+                           <div><a href="/cineseries/cinemas/list">Cinémas</a></div>
+                           <div><a href="/cineseries/films/list">Films</a></div>
+                           <div><a href="/cineseries/series/list">Séries</a></div>
+                           <div><a href="/cineseries/realisateurs/list">Réalisateurs</a></div>
+                           <div><a href="/cineseries/acteurs/list">Acteurs</a></div>
+                          <!-- <div class="subnav">
+                             <button class="subnavbtn">Films </button>
+                             <div class="subnav-content">
+                               <a href="Films_affiche.html">A l'affiche</a>
+                               <a href="Prochaines_Sorties.html">Prochaines Sorties</a>
+                             </div>
+                           </div>
+                           <div class="subnav">
+                             <button class="subnavbtn">Séries </button>
+                             <div class="subnav-content">
+                               <a href="Séries_du_moment.html">Séries du moment</a>
+                               <a href="Séries_à_venir.html">Séries à venir</a>
+                             </div>
+                           </div>
+                           <div class="subnav">
+                             <button class="subnavbtn">Réalisateurs </button>
+                             <div class="subnav-content">
+                               <a href="#link1"></a>
+                               <a href="#link2"></a>
+                             </div>
+                           </div>
+                           <div class="subnav">
+                               <button class="subnavbtn">Acteurs</button>
+                               <div class="subnav-content">
+                                 <a href="#link1"></a>
+                                 <a href="#link2"></a>
+                               </div>
+                           </div>-->
+       
+                           <div class="search-container">
+                             <form action="/action_page.php">
+                               <input type="text" placeholder="Rechercher un film, une série, ..." name="search">
+       
+                             </form>
+                           </div>
+
+                           {% if user.is_authenticated %}
+            <div><a href="{% url 'user_account' %}">Mon compte</a></div>
+            <div><a href="{% url 'user_logout' %}">Se déconnecter</a></div>
+        {% else %}
+            <div><a href="{% url 'user_register' %}">Créer un compte</a></div>
+            <div><a href="{% url 'user_login' %}">Se connecter</a></div>
+        {% endif %}
+       
+                           <!-- <div>
+                             <a title="Search W3Schools" class="topnav-icons fa w3-right w3-bar-item w3-button" onclick="open_search(this)" href="javascript:void(0);">
+                             <span style="font-family:verdana;font-weight:bold;">X
+                             </span>
+                             </a>
+                           </div>
+                      </div> -->
+                   </div>                           
+                          
+               </div>
+           </header>
+            {% block content %}
+            {% endblock %}
+            <footer class="footer  navbar-fixed-bottom">
+
+                <div class="foot">
+                    <h4>Informations</h4>
+                        <ul>
+                            <li class=""><a href="Evènements.html">Evènements</a></li>
+                            <li class=""><a href="mailto:contact@PyCINE.com">Nous contacter</a></li>
+                        </ul>
+                </div>
+                <div class="foot">
+                    <h4>Cartes et Club</h4>
+                        <ul>
+                            <li class=""><a href="le_club_PyCINE.html">Le Club PyCINE</a></li>
+                            <li class=""><a href="P'tyCINE_Club.html">Le P'tyCINE Club</a></li>
+                        </ul>
+                </div>
+                <div class="foot">
+                    <h4>A propos de PyCINE</h4>
+                        <ul>
+                            <li class=""><a href="Votre_avis_nous_interesse.html">Votre avis nous interesse</a></li>
+                            <li class=""><a href="Recrutement.html">Recrutement</a></li>
+                        </ul>
+                </div>
+                
+                <div class="foot">
+                    <h4>Informations légales</h4>
+                        <ul>
+                            <li class=""><a href="Politique_de_confidentialité - PYCINE.html">Politique de confidentialité</a></li>
+                            <li class=""><a href="Mentions_légales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </footer>
+            
+        </div>
+    </body>
+</html> 

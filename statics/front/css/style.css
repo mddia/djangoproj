@@ -1,0 +1,413 @@
+
+/* logo navbar menu */
+#PyCINE_3{
+  float:left;
+}
+
+/* The navigation menu */
+.navbar {
+    overflow: hidden;
+    background-color: #08288b;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The subnavigation menu */
+  .subnav {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Subnav button */
+  .subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Add a red background color to navigation links on hover */
+  .navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: rgb(149, 224, 247);
+  }
+  
+  /* Style the subnav content - positioned absolute */
+  .subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgb(149, 224, 247);
+    width: 100%;
+    z-index: 1;
+  }
+  
+  /* Style the subnav links */
+  .subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Add a grey background color on hover */
+  .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+  }
+  
+  /* When you move the mouse over the subnav container, open the subnav content */
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+
+
+  
+  
+body, html{height:100%;}
+
+body{
+  text-align:center;
+  }
+
+.main{
+    max-width:1280px;
+    min-height:100%;
+    margin:0 auto;
+    position:relative;
+    }
+ 
+/*paramétrer le conteneur*/
+.container{
+    height: fit-content;
+    width: fit-content;
+    grid-template-rows: 1fr;
+    grid-template-areas: "header sidebar content footer";
+    overflow: hidden;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 10px;
+    background-color: #e5ebf3;
+    padding: 10px;
+    align-content: center;
+}
+
+.titre{
+  color: #08288b;
+  font-family:uniformRegular;
+  font-weight: bolder;
+  float: left;
+  margin-top : 35px;
+  text-transform: uppercase;
+}
+
+.button_détail{
+  background-color:rgb(156, 219, 238);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #08578b;
+  font-family:uniformRegular;
+  font-weight: bolder;
+  font-size : 100%;
+  padding: 15px 5px;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+  text-transform: uppercase;
+  box-shadow: ;
+}
+
+*début paramétrage main page footer P'tyCINE*/
+.PtyCINE{
+color: #08288b;
+font-family:uniformRegular; 
+float: left;
+}
+
+#PtyCINE{
+background-image: url(https://images.app.goo.gl/xhrSoDrJdvZRMtu38 );
+}
+
+/*Fin paramétrage bmain page footer P'tyCINE*/
+
+/*fin paramétrage conteneur*/
+
+
+    
+
+
+/* CSS DU FOOTER     */
+
+
+
+
+
+/*CSS de la login page*/
+/* html {
+    background-color: #56baed;
+  } */
+ 
+.bodylogin {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+  }
+  
+a {
+    color: #92badd;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* display:inline-block; */
+    margin: 40px 8px 10px 8px; 
+    color: #cccccc;
+  }
+  
+  
+  
+  /* STRUCTURE */
+
+  div.containeraccueil{
+    min-height: 75vh;
+    /* display: flex; */
+    height: fit-content;
+    background: url(composition-lumineuse-appareil-photo-du-mais-souffle_23-2147807348.jpg) no-repeat 0 0;
+    justify-content: space-around;
+    background-size: contain;
+    background-position:center center;
+    }
+  
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  
+  #formContent {
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    max-width: 450px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  
+  #formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  
+  
+  /* TABS */
+  
+  h2.inactive {
+    color: #cccccc;
+  }
+  
+  h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  
+  
+  /* FORM TYPOGRAPHY*/
+  
+  input[type=button], input[type=submit], input[type=reset]  {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+    background-color: #39ace7;
+  }
+  
+  input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+    transform: scale(0.95);
+  }
+  
+  input[type=text] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-grid;
+    font-size: 14px;
+    margin: 5px;
+    width: 20%;
+    border: 2px solid #f6f6f6;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  input[type=text]:placeholder {
+    color: #cccccc;
+  }
+  
+  
+  
+  /* ANIMATIONS */
+  
+ 
+  .fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+  .fadeIn {
+    opacity:0;
+    animation:fadeIn ease-in 1;
+  
+    animation-fill-mode:forwards;
+  
+    animation-duration:1s;
+  }
+  
+  
+  .fadeIn.second {
+    animation-delay: 0.6s;
+  }
+  
+  .fadeIn.third {
+    animation-delay: 0.8s;
+  }
+  
+  .fadeIn.fourth {
+    animation-delay: 1s;
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+  }
+  
+  .underlineHover:hover {
+    color: #0d0d0d;
+  }
+  
+  .underlineHover:hover:after{
+    width: 100%;
+  }
+  
+.avis{
+  background-color: #56baed; 
+}
+  
+  /* OTHERS */
+  
+  *:focus {
+      outline: none;
+  } 
+  
+  #icon {
+    width:60%;
+  }
+
+
+/* PARAMETRAGE DU FOOTER */
+
+.footer {
+  grid-area: ft;
+  display : grid;
+  grid-template-columns: 200px 200px 200px 280px;
+  justify-content: space-between;
+  background-color: #08288b;
+  font-family: uniformRegular;
+ }
+
+h4{
+  color :rgb(149, 224, 247);
+}
+
+.foot ul{
+  list-style-type: none;
+  text-decoration: none;
+  color : #fefcff;
+  align-content: center;
+ }
+
+.foot a{
+text-decoration: none;
+color : #fefcff;
+}
+/*fin paramétrage footer*/
+

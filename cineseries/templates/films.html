@@ -1,0 +1,25 @@
+{% extends "./base.html" %}
+{% block title %}ciné-séries{% endblock %}
+
+{% block content %}
+    <table class="table">
+    {% for film in films %}
+
+        <tr>
+            <td>
+                <b><a href="{% url 'film' id_film=film.id %}">
+                    {{ film.titre }}
+                </a></b><br />
+                <br />
+                {{ film.resume }}
+            </td>
+            <td>
+                <a href="{% url 'film' id_film=film.id %}">
+                <img style="width : 150px" src="{{ film.affiche.url }}" />
+                </a>
+            </td>
+        </tr>
+
+    {% endfor %}
+    </table>
+{% endblock %}

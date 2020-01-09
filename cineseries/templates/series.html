@@ -1,0 +1,35 @@
+{% extends "./base.html" %}
+{% block title %}ciné-séries{% endblock %}
+
+{% block content %}
+    <table class="table">
+    {% for serie in series %}
+
+        <tr>
+            <td>
+                <b><a href="{% url 'serie' id_serie=serie.id %}">
+                    {{ serie.titre }}
+                </a></b><br />
+                <br />
+                {{ serie.titre }}
+                {{ serie.date }}
+                {{ serie.saison }}
+                {{ serie.resume }}
+                {{ serie.titre }}
+                {{ serie.episode }}
+                {{ serie.date }}
+                {{ serie.affiche }}
+                {{ serie.resume }}
+                {{ serie.critiques }}                
+            </td>
+            <td>
+                <a href="{% url 'serie' id_serie=serie.id %}">
+                <img src="{{ serie.affiche.url }}" />
+                <!--à consulter pour intégrer les vidéos  https://stackoverflow.com/questions/28268574/set-url-to-load-iframe-in-a-django-template-->              
+                </a>
+            </td>
+        </tr>
+
+    {% endfor %}
+    </table>
+{% endblock %}
